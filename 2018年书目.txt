@@ -1,0 +1,31 @@
+需要熟练使用主流的数据挖掘（或统计分析）工具如
+Business Analytics and Business Intelligence Software（SAS）、SPSS、EXCEL等。
+需要对与所在行业有关的一切核心数据有深入的理解，以及一定的数据敏感性培养。
+
+经典图书推荐：《概率论与数理统计》、《统计学》推荐David Freedman版、《业务建模与数据挖掘》、
+《数据挖掘导论》、《SAS编程与数据挖掘商业案例》、《Clementine数据挖掘方法及应用 》、
+《Excel 2007 VBA参考大全》、《IBM SPSS Statistics 19 Statistical Procedures Companion》等。
+
+
+
+
+Horn的《矩阵分析》
+ 门登霍尔的《统计学》
+《凸优化》《最优化导论》
+《数据挖掘导论》
+《统计学习方法》 李航
+《模式分类》 
+《数据挖掘导论》范明范宏建 译
+《集体智慧编程》
+李航老师的《统计学习方法》、周志华老师的《机器学习》（西瓜书）、Mitchell的《机器学习》
+
+
+《数据挖掘-实用机器学习工具与技术》
+视频：台大的《机器学习基石》与《机器学习技法》
+《利用Python进行数据分析》
+《机器学习系统设计》
+机器学习：《pattern recognition and machine learning》
+Yoshua Bengio的《深度学习》
+Nielsem的《Neural Networks and Deep Learning》
+http://www-users.cs.umn.edu/~kumar/dmbook/index.php
+吴恩达老师在course上的机器学习课程
