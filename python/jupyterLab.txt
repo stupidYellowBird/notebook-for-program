@@ -1,0 +1,4 @@
+启动python -m jupyter  lab
+
+python -m jupyter contrib nbextension install
+python -m jupyter nbextensions_configurator enable

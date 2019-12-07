@@ -1,0 +1,76 @@
+豆瓣源安装
+pip3 install -i https://pypi.doubanio.com/simple/ selenium
+
+切换语言，ctrl k m
+窗口切换 ctrl tab
+1、用DJANGO重构代码
+然后前端用vue
+
+2、继续用flask—admin实现
+
+### 2018.04.27
+    1. 安装face_recognition 要求有dlib19.7以上，但是官网上没有适合python3.5版本的dlib>=19.7，下载了一个dlib（python3.60版本）然后改名为3.5安装通过
+    2. 但是导入```import face_recognition```失败
+    3. 然后在anoaconda中```pip install dlib==19.7.0```成功
+    4. 再```pip install face_recognition```成功
+
+anoconda学习使用
+升级Anaconda需要先升级conda
+```
+conda update conda #更新conda
+conda update anaconda #跟新anoconda
+conda update python #更新python
+
+```
+卸载
+由于Anaconda的安装文件都包含在一个目录中，所以直接将该目录删除即可。删除整个Anaconda目录：
+
+```
+rm -rf anaconda
+```
+安装包
+```
+conda install package
+```
+安装指定版本的包
+```
+conda install package==1.1.1
+
+```
+删除包
+```
+conda remove XXX
+```
+
+
+2018.05.12
+学习python标准库
+builtin模块
+type(__builtin__)
+asserterror
+memoryview classmethod  filter slice
+
+ArithmeticError
+                    FloatingPointError
+                    OverflowError
+                    ZeroDivisionError
+                AssertionError
+                AttributeError
+                BufferError
+
+Method resolution order:方法解析顺序
+
+__delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |
+     |  __reduce__(...)
+     |      helper for pickle
+
+vars(...)
+        vars([object]) -> dictionary
+
+        Without arguments, equivalent to locals().
+        With an argument, equivalent to object.__dict__.

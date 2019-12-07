@@ -1,0 +1,11 @@
+TypeError: splitext() missing 1 required positional argument: 'p'
+TypeError：splitext（）缺少1个必需的位置参数：'p'
+
+
+SyntaxError: EOL while scanning string literal
+SyntaxError：扫描字符串文字时的EOL
+
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+bs4 .featurenotfound :无法找到具有您要求的功能的树生成器:lxml。您是否需要安装解析器库?1
+
+EOL while scanning string literal: <string>, line 1, pos 7 google一下,这个异常造成的原因是字符串,引号没有成对出现

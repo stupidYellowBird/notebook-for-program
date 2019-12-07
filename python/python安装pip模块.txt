@@ -1,0 +1,257 @@
+pip3.5 install -i http://pypi.douban.com/simple win --trusted-host pypi.douban.com 
+
+（不要再python环境下用）
+
+pip uninstall flask
+pip list
+
+
+
+1、Python的很多第三方库都是开源的，我们能从GitHub或者PyPi下载到源码，大多数情况得到的源码都是.zip  tar.gz  tar.zip  tar.bz2格式的压缩包。解压这些包，进入文件夹可以看到setup.py的文件，Windows下用Dos命令进行安装。这里以requests包为例，先到PyPi下载好requests-2.9.1.tar.gz这里解压到D盘跟目录后进入文件夹找到setup.py，然后按住Shift后再点击右键进入该文件夹的Dos命令窗口后输入以下的命令安装即可。
+
+2、同样的卸载第三方库可以使用pip进行操作，输入下面命令后询问是否开始输入y后回车自动卸载完成。
+
+3、查看装好的库
+
+查看已经装好的库列表，库名后面带着版本号，也可以在编辑器环境下使用import requests导入相应的库，如果没有报错则说明导入成功。
+
+4、Python科学计算的瑞士军刀——Anoaconda 安装与配置
+
+Python是一种强大的编程语言，其提供了很多用于科学计算的模块，常见的包括numpy、scipy和matplotlib。要利用Python进行科学计算，就需要一一安装所需的模块，而这些模块可能又依赖于其它的软件包或库，因而安装和使用起来相对麻烦。幸好有人专门在做这一类事情，将科学计算所需要的模块都编译好，然后打包以发行版的形式供用户使用，Anaconda就是其中一个常用的科学计算发行版
+
+自带的包管理器conda也非常强大，甚至支持多个版本的 Python 共存
+
+主页地址：Anaconda Scientific Python Distribution
+-----------------------------------------------------------------------------------------------------------------
+1. 下载安装
+建议下载zip压缩包，速度快。安装过程是傻瓜式的，跟平时安装其他软件没啥区别
+
+2. 终端执行`conda list`可查看安装了哪些包
+3. 获取免费的学术License（此步骤可跳过，如果你对高性能库没有需求的话）
+申请地址：The Anaconda Python Distribution for Academics
+使用`edu`邮箱申请后，会在邮箱自动收到`license_academic`文件，将其放在`~/.continuum`目录下即可。
+
+4. 安装额外的包（命令行环境下执行）
+$ conda update conda
+$ conda install accelerate
+$ conda install iopro
+
+下面就是spyder的主界面。变量查看窗口很好用。
+
+5. 更换编辑器背景主题方案
+
+6. 更换IPython 终端背景
+
+7. 切割编辑器，多文本同时编辑
+
+经过简单的配置之后，集成化开发环境变得非常的 Cool ！
+
+
+源码安装
+很多第三方库都是开源的，几乎都可以在github 或者 pypi上找到源码。找到源码格式大概都是 zip 、 tar.zip、 tar.bz2格式的压缩包。解压这些包，进入解压好的文件夹，通常会看见一个 setup.py 的文件。打开命令行，进入该文件夹。运行
+?
+1
+python setup.py install
+这个命令，就能把这个第三库安装到系统里，也就是你的 Python 路径，windows大概是在 C:\Python2.7\Lib\site-packages。
+Linux会在 /usr/local/lib/python2.7/dist-packages。
+Mac 应该在 /Library/Python/2.7/site-packages。如果是在 virtulenv环境下安装，这个包就被安装在所建立的虚拟环境下的 site-packages/目录下。想要卸载这些库也很简单，进入 site-packages，直接删掉库文件就 OK 啦。当然，这些安装可能有一点麻烦，需要下载，解压，再运行安装，卸载也不是很方便。有没有一种工具，可以帮外面管理这些库呢？
+包管理器 （pip 和 easy_install）
+现在很多编程语言，都带有包管理器，例如 Ruby 的 gem，nodejs的npm。Python当然也不例外，拥有大名鼎鼎的 pip和 easy_install。
+前面说到的pypi就是一些 python第三库所在的源，使用 pip 或者 easy_install 安装模块，会搜索这个源，然后自动下载安装。比如我们需要安装 flask 框架具体命令如下：
+?
+1
+pip install flask
+或者
+?
+1
+easy_install flask
+简单吧，一个简单的命令就搞定。卸载也很方便，例如我们需要卸载flask
+?
+1
+pip uninstall flask
+查看所安装的包，包括系统自带的和手动安装的
+?
+1
+pip list
+还可以搜索包
+?
+1
+pip search flask
+还可以重定向输出项目使用的库。
+?
+1
+pip freeze > requirements.txt
+这样就会把该环境下的第三方库重定向到 requirements.txt文件内，如果给别人安装项目的依赖，只需要运行：
+?
+1
+pip install -r requirements.txt
+很方便吧。当然，有时候，我们的网络并不是那么顺畅，pip是在线安装的，可不可以离线呢？当然可以啦，pip install 的第一步，就是在 pypi 上寻找包，然后下载到本地。如果网络不好，可以先建一个本地的仓库，把常用的包离线下载。比如可以下载 flask 的源码
+?
+1
+pip intall flask-master.zip
+同样也可以安装。
+虚拟环境相关安装
+当然，上面介绍的，其实也是很普通很常见的方式，也算不上什么技巧。下面介绍的，则是一些需要了解原理和解决非常规问题的技巧。
+使用Python，我们会喜欢用 virtualenv建立虚拟环境，例如建立一个 venv的虚拟环境。我们只需要 source进去就可以使用pip安装了。可是有时候，即使在虚拟环境下，使用了sudo的前缀（windows忽略），那么安装的库不是在虚拟环境，而是被安装到系统下的site-package 目录下了。
+windows的用户可能会很开心，不需要注意这个问题。当然 windows 也同样有着自己的问题。在 windows上安装python，一般是编译好的二进制包exe可执行文件。通常有 32位和64位的python。对于第三方库，本来32和64不会有太大的差别。但是对于一些C写的python库，如mysqldb，PIL， pillow，会发现使用 pip或者 easy_install 的方式会报错：
+?
+1
+Fixing python error: Unable to find vcvarsall.bat
+原因大概是 windows上缺少一些 C编译器东东。源码需要编译一下才能安装，此时 windows就很苦逼了。当然，有一些好心人，帮您把常用的一些库编译成 exe 可执行文件，放到了这个站点。你只需要寻找对于版本的，下载一键安装。
+可是，还有一个问题，下载 exe 文件，运行安装，这个库是被安装到了系统的 site-package 目录下，如果我在windows 建立了venv虚拟环境，这样安装不是歇菜了么？
+别担心，这个文章的真正技巧，就是为了解决这个问题的。我们来安装64位的 mysqldb。先下载 MySQL?python?1.2.5.win?amd64?py2.7.exe 在 windows 上，用命令行进入虚拟环境 venv。然后运行
+?
+1
+easy_install MySQL?python?1.2.5.win?amd64?py2.7.exe
+完美解决，在 venv 虚拟环境，将mysqldb 库安装到了venv下。
+有了上面三个方式，几乎涵盖 python 所有平台的第三方库安装。不过话说回来，尽管 Python 是跨平台，开发环境，还是尽量使用 Linux或者MacOS，这两个系统有更好的工具以及省去很多莫名其妙的问题。
+
+pip的官方源python.pypi.org貌似被墙，换用国内安装源
+
+网上的设置方法都是基于Unix的，Windows下的设置略麻烦。
+
+更新..\Lib\site-packages\pip下的cmdoptions.py文件里index_url的default貌似不能正常工作，只能使用命令行指定源的方式了。
+
+国内源：
+
+豆瓣的包较全
+
+pypi.douban.com
+
+ 
+
+使用模板为：
+
+pip install -i http://<mirror>/simple <package>
+
+ 
+
+最好跟上--trusted-host <mirror>
+
+所以最终的安全链接模板就是：
+
+pip install -i http://<mirror>/simple <package> --trusted-host <mirror>
+
+ 
+
+使用实例：
+
+pip install -i http://pypi.douban.com/simple pandas --trusted-host pypi.douban.com
+
+pip install -i http://pypi.douban.com/simple django --trusted-host pypi.douban.com
+
+ 
+
+通过更改pip.conf更改的方法是在根目录下的~/.pip/pip.conf目录添加可信源，如果目录或文件不存在，则直接创建出来。
+
+pip.conf内容为：
+
+
+[global]
+index-url=http://pypi.douban.com/simple
+trusted-host = pypi.douban.com
+
+ 
+
+加上trusted-host防止pip报警。
+
+ 
+
+在Windows下，对应的路径是
+
+环境变量
+
+%APPDATA%\pip\pip.ini
+%HOME%\pip\pip.ini
+
+默认路径
+C:\Documents and Settings\All Users\Application Data\PyPA\pip\pip.conf (Windows XP)
+C:\ProgramData\PyPA\pip\pip.conf (Windows 7及以后)
+
+ 由于Gensim 官网暂时还没有Python3.5 对应的版本，本人安装 Gensim时也是各种纠结，因此专门开通博客，想通过博客来记录一下安装过程，希望也能对部分同道中人有点帮助。
+环境：
+win7 64位，Python3.5.1。
+步骤：
+1.安装3.5.1
+官网下载3.5.1    https://www.python.org/ftp/python/3.5.1/python-3.5.1-amd64.exe
+直接运行安装
+2.安装 numpy+mkl
+由于Gensim需要scipy 和 numpy，而scipy的非官方版需要 numpy+mkl，因此首先安装 numpy+mkl，非官方版
+下载地址：http://www.lfd.uci.edu/~gohlke/pythonlibs/6kbpejrn/numpy-1.11.1rc1+mkl-cp35-cp35m-win_amd64.whl
+安装命令：
+a、打开cmd命令行 
+  b、进入 numpy-1.11.1rc1+mkl-cp35-cp35m-win_amd64.whl 所在目录
+c、输入pip install numpy-1.11.1rc1+mkl-cp35-cp35m-win_amd64.whl
+d、等待安装完成。
+3.安装scipy
+这个是当时我比较纠结的，总是找不到合适的版本，后来终于找到了非官方版的。
+下载地址：http://www.lfd.uci.edu/~gohlke/pythonlibs/6kbpejrn/scipy-0.17.1-cp35-cp35m-win_amd64.whl
+安装命令：
+a、打开cmd命令行 
+   b、进入 scipy 所在目录
+c、pip install scipy-0.17.1-cp35-cp35m-win_amd64.whl
+d、安装完成
+4.安装Gensim
+下载地址：https://pypi.python.org/packages/2f/fb/b651ba293e4514c2ce11dcf5be38b1ba0924ab37ccca823d4f5548c0a64a/gensim-0.13.0rc1-cp35-cp35m-win_amd64.whl#md5=28da237ed4f4b2b92b4f0fc4995db939
+同上，安装。
+5.测试Gensim是否安装完成
+测试例子：网址：Gensim做中文主题模型（LDA) 
+
+软件环境：win10 64bit Python2.7
+
+一、设置系统环境变量
+
+如下图最后一行，将你的Python的script目录添加到系统的Path变量中。
+
+
+
+
+二、安装wheel
+
+win+R：pip install wheel，如下图。
+
+
+
+
+三、安装numpy matplotlib scipy
+
+到http://www.lfd.uci.edu/~gohlke/pythonlibs/页面下载相应版本的安装包。
+
+
+可以使用#numpy快速定位，如http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+
+我的安装包依次为：
+
+
+numpy-1.10.4+mkl-cp27-none-win_amd64.whl
+
+matplotlib-1.5.1-cp27-none-win_amd64.whl
+
+scipy-0.16.1-cp27-none-win_amd64.whl 
+
+
+安装numpy：
+
+
+
+
+安装matplotlib：会再次下载文件，等待即可。
+
+
+
+
+安装scipy：
+
+
+
+四、验证安装是否成功
+
+在Python安装目录下打开Python.exe,输入下图命令，如不出现提示，即为成功。
+
+
+
+
+参考文章：http://my.oschina.net/HIJAY/blog/485063
+
+
+

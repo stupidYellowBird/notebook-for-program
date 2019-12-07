@@ -1,0 +1,28 @@
+ IDLE这里指的是 An I ntegrated D eveL opment E nvironment for Python，是python自带的编辑器
+
+增加多行缩进： Ctrl + ]  (右中括号)
+
+减少多行缩进：Ctrl + [  (左中括号)
+
+添加多行注释：Alt + 3
+
+取消多行注释：Alt + 4
+
+ 
+
+更多可以查看 IDLE菜单栏的Options -> Configure IDLE… -> Keys选项卡
+
+如果想自定义快捷键，则选中要自定义的命令，然后点击Get New Keys for Selection
+
+在Python Shell里重复上一条命令，Alt + P ，相当于Linux Shell里的上方向键。
+
+----------------------------------------------------------------------------------------
+
+
+还有更简单的一个例子：将‘Hello?Tkinter’打印到标题上，Label也不用创建了?
+
+from?Tkinter?import?*?
+root?=?Tk()?
+
+root.title('hello?Tkinter')
+root.mainloop()?

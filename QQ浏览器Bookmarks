@@ -1,0 +1,84 @@
+{
+   "checksum": "07b504d2bae2a4d44f937a4d29a7c89c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13176531178020081",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13181792429083982"
+            },
+            "name": "装逼大全 - 惊不惊喜？意不意外？ -- zgldh",
+            "type": "url",
+            "url": "https://www.zhuangbi.info/"
+         }, {
+            "date_added": "13180459223183889",
+            "id": "7",
+            "meta_info": {
+               "last_visited_desktop": "13180459223184378"
+            },
+            "name": "linux命令在线中文手册",
+            "type": "url",
+            "url": "http://linux.51yip.com/"
+         }, {
+            "date_added": "13186862991455262",
+            "id": "25",
+            "meta_info": {
+               "last_visited_desktop": "13186862991455849"
+            },
+            "name": "Running a Django app on Windows IIS « KronosKoders",
+            "type": "url",
+            "url": "http://kronoskoders.logdown.com/posts/1074588-running-a-django-app-on-windows-iis"
+         }, {
+            "date_added": "13187562161309387",
+            "id": "27",
+            "meta_info": {
+               "last_visited_desktop": "13187562161309905"
+            },
+            "name": "Welcome to django_echarts’s documentation! — django_echarts 0.3.6 文档",
+            "type": "url",
+            "url": "https://django-echarts.readthedocs.io/zh_CN/latest/index.html"
+         }, {
+            "date_added": "13189341240407458",
+            "id": "29",
+            "meta_info": {
+               "last_visited_desktop": "13189341240408180"
+            },
+            "name": "PyCharm 收藏多年快捷键分享 WOW | Henry Z's blog~",
+            "type": "url",
+            "url": "https://changchen.me/blog/20170607/pycharm-shortcut/"
+         }, {
+            "date_added": "13212295431832389",
+            "id": "31",
+            "meta_info": {
+               "last_visited_desktop": "13212295431868846"
+            },
+            "name": "Cheat Sheet",
+            "type": "url",
+            "url": "https://docs.emmet.io/cheat-sheet/"
+         } ],
+         "date_added": "13159986348433244",
+         "date_modified": "13212295431832389",
+         "id": "1",
+         "name": "书签栏",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13159986348433261",
+         "date_modified": "0",
+         "id": "2",
+         "name": "其他书签",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13159986348433262",
+         "date_modified": "0",
+         "id": "3",
+         "name": "移动设备书签",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

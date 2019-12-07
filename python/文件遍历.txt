@@ -1,0 +1,29 @@
+关于Python的文件遍历，大概有两种方法，一种是较为便利的os.walk()，还有一种是利用os.listdir()递归遍历。
+方法一：利用os.walk
+os.walk可以自顶向下或者自底向上遍历整个文件树，然后返回一个含有3个元素的tuple，(dirpath, dirnames, filenames)，要注意的是，os.walk()会返回一个generater，所以调用的时候一定要放到for循环中。
+复制代码 代码如下:
+
+import os
+def walk_dir(dirname):
+ for root,dirs,files in os.walk(dirname):
+  for f in files:
+   yield os.path.join(root, f)
+
+
+
+方法二：利用os.listdir()
+这个方法也比较简单，列出目录然后判断是不是文件夹，不是的话直接返回文件路径，是的话递归调用。
+复制代码 代码如下:
+
+import os
+def walk_dir2(dirname):
+ for d in os.listdir(dirname):
+  path = os.path.join(dirname, d)
+  if os.path.isdir(path):
+   #note recursive in for...in...
+   for f in walk_dir2(path):
+    yield f
+  else:
+   yield path
+
+这里值得一提的是，由于函数中使用了yield，所以会被认为是一个generater，递归调用的时候也需要放到for循环中，否则函数并不会被真正执行。最新的Python 3.3中引入了yield from语法，可以解决上面的问题。

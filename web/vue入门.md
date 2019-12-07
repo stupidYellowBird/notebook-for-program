@@ -1,0 +1,43 @@
+### vue安装步骤
+
+在安装vue之前，先确保node和npm是否安装。如果安装ok，那么接下来安装vue
+
+1. npm install vue  (安装vue)
+
+2. npm install --global vue-cli  （全局安装vue-cli）
+
+因为npm是国外的，使用起来比较慢，使安装vue会出现报错，那么你可以试着  安装 淘宝镜像：
+
+1. npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+2. cnpm install cnpm -g   (安装cnpm)
+
+3. cnpm install vue   (安装vue)
+
+4. cnpm install --global vue-cli   （安装vue-cli）
+
+### vue搭建项目
+
+1. vue init webpack 项目名称
+
+2. cd 项目目录下
+
+3. npm run dev   (运行项目)
+
+4. npm i element-ui –S   （安装elementui）在package.json可以看到elementui已经安装好了
+
+5. 在main.js中引入elementui  （main.js是入口文件，所以在这里引入就行，页面就不用引入了）
+
+6. 前后端交互，要安装axios,并且在main.js配置（安装跟引入  跟elementui一样）
+
+      页面对接代码：
+
+      ```javascript
+      axios.get(url).then(res=>{
+      if(res.data.retCode == 200){
+      //成功
+      }else{
+      //失败
+      }
+      })
+      ```
